@@ -1,0 +1,74 @@
+As a mathematical problem solver, you will be presented with a problem statement that includes variables, along with an example value and description for each variable. A Python function designed to solve the problem will also be provided, with the function's inputs being these variables. 
+Your task is to define the range of the function's input values in Python code format. This will enable us to generate new values for each variable. Please consider the description of each variable and the problem statement. 
+Please note:
+1. The range should not be a fixed value. If it is, the variable should be eliminated.
+2. When sampling a value and incorporating it into the problem statement, ensure that the sampled value does not disrupt the fluency or coherence of the original statement.
+3. If the range is a random integer, then set the maximum number as 100.
+
+For Example:
+
+### Problem with Variables:
+Billy sells DVDs. He has {first_group_customers + second_group_customers + third_group_customers} customers on Tuesday. His first {first_group_customers} customers buy {first_group_dvds} DVDs each. His next {second_group_customers} customers buy {second_group_dvds} DVDs each. His last {third_group_customers} customers don't buy any DVDs. How many DVDs did Billy sell on Tuesday?
+
+### Variables: 
+first_group_customers = 3 # Number of customers in the first group
+first_group_dvds = 1 # Number of DVDs each customer in the first group buys
+second_group_customers = 2 # Number of customers in the second group
+second_group_dvds = 2 # Number of DVDs each customer in the second group buys
+third_group_customers = 3 # Number of customers in the third group
+
+### Function:
+```python
+def solution(first_group_customers, first_group_dvds, second_group_customers, second_group_dvds, third_group_customers):
+    total_dvds_sold = (first_group_customers * first_group_dvds) + (second_group_customers * second_group_dvds) + (third_group_customers * 0)
+    return total_dvds_sold
+```
+
+### Value range:
+first_group_customers = random.randint(2, 100) # Number of customers in the first group can be any integer between 2 and 100
+first_group_dvds = random.randint(2, 100) # Number of DVDs each customer in the first group buys can be any integer between 1 and 100
+second_group_customers = random.randint(2, 100) # Number of customers in the second group can be any integer between 2 and 100
+second_group_dvds = random.randint(2, 100) # Number of DVDs each customer in the second group buys can be any integer between 1 and 100
+third_group_customers = random.randint(2, 100) # Number of customers in the third group can be any integer between 2 and 100
+
+### Problem with Variables:
+John arm wrestles {total_people} people. He beats {win_percentage}%. How many people did he lose to?
+
+### Variables:
+total_people = 20 # Total number of people John arm wrestles
+win_percentage = 80 # Percentage of people John beats
+
+### Function:
+```python
+def solution(total_people, win_percentage): 
+    wins = (win_percentage / 100) * total_people 
+    losses = total_people - wins 
+    return int(losses)
+```
+
+### Value range:
+total_people = random.randint(1, 100) # Total number of people John arm wrestles can be any integer between 1 and 100
+win_percentage = random.randint(1, 100) # Percentage of people John beats can be any integer between 0 and 100
+
+### Problem with Variables:
+James hires a horse-drawn carriage from 5 PM to {total_hours + 5} PM. He gets {free_hours} hour free. The first paid hour is ${first_hour_cost} and each hour after that is {cost_multiplier} times the cost. How much did he pay?
+
+### Variables:
+total_hours = 4 # Total hours James hires the carriage
+free_hours = 1 # Number of free hours
+first_hour_cost = 15 # Cost of the first paid hour
+cost_multiplier = 2 # Multiplier for each hour after the first
+
+### Function:
+```python
+def solution(total_hours, free_hours, first_hour_cost, cost_multiplier):
+    paid_hours = total_hours - free_hours
+    total_cost = first_hour_cost + (first_hour_cost * cost_multiplier * (paid_hours - 1))
+    return total_cost
+```
+
+### Value range:
+total_hours = random.randint(1, 7) # Total hours James hires the carriage can be any integer between 1 and 7
+free_hours = random.randint(0, total_hours) # Number of free hours can be any integer between 0 and total_hours
+first_hour_cost = random.randint(10, 100) # Cost of the first paid hour can be any integer between 10 and 100
+cost_multiplier = random.uniform(1.1, 3.0) # Multiplier for each hour after the first can be any float between 1.1 and 3.0

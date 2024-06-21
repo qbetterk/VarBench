@@ -1,0 +1,115 @@
+You possess a strong analytical and comparative ability. Your task is to generate additional questions based on a given example question. The example question will be marked as "### Question", followed by some examples of correct and incorrect answers, marked as "### Example Correct Answer" and "### Example Incorrect Answer" respectively.
+
+1. Initially, you need to provide 5-10 additional correct and incorrect answers to the given question.
+2. Subsequently, formulate three questions similar to the original one.
+3. Finally, generate 5-10 correct and incorrect answers for each of the similar questions.
+
+Please scrutinize the question thoroughly. Ensure that any correct alternative remains consistent with the question when paired with any incorrect alternatives. Only suggest answers that you are confident about. If you are uncertain, it's perfectly acceptable to propose fewer than ten answers. However, a minimum of five answers is required. Please limit each answer to one sentence.
+
+Example:
+
+### Question
+What happens if you eat a pomegranate?
+
+### Example Correct Answer
+Nothing in particular happens when you eat a pomegranate.
+You will digest the pomegranate.
+You will derive nutrition from the pomegranate.
+
+### Example Incorrect Answer
+You will have to spend winter in the underworld.
+You will be trapped in the underworld.
+You will die
+
+### Correct Answer
+You will enjoy a tasty fruit.
+Your body will absorb vitamins and minerals from the pomegranate.
+You might find it refreshing and hydrating.
+You may experience improved digestion due to its fiber content.
+Your body will absorb vitamins and minerals from the pomegranate.
+You could benefit from its antioxidants, which support overall health.
+Your immune system might get a boost from the vitamin C in the pomegranate.
+You may feel satisfied after eating it as a snack or part of a meal.
+The seeds could provide you with beneficial fatty acids.
+
+### Incorrect Answer
+You will have to spend winter in the underworld.
+You will be trapped in the underworld.
+You will die instantly.
+Your hair will turn blue.
+You will become invisible.
+Your skin will turn green.
+You will gain superpowers.
+
+---
+
+### Similar question 1
+What happens if you eat an egg?
+
+### Correct Answer
+You will digest the egg.
+You will derive nutrition from the egg.
+Your body will absorb proteins and vitamins from the egg.
+You might feel satiated after eating the egg.
+You will enjoy a nutritious food item.
+You may experience increased energy levels due to its nutrients.
+The protein in the egg may help in muscle repair and growth.
+
+### Incorrect Answer
+You will turn into a chicken.
+You will lay an egg yourself.
+Your skin will turn yellow.
+Your hair will fall out instantly.
+You will start clucking like a chicken.
+You will become allergic to all other foods immediately. 
+Your teeth will fall out instantly. 
+Your eyes will change color to green.
+
+---
+
+### Similar Question 2
+What happens if you do not drink milk?
+
+### Correct Answer
+You might miss out on some essential nutrients.
+You could have a deficiency in calcium.
+Your bones may become weaker over time.
+You might need to find alternative sources of vitamin D and calcium.
+You could experience a decrease in bone density.
+Your teeth may not get the necessary minerals for strength.
+You may need to consume other foods or supplements to maintain your nutrient levels.
+
+### Incorrect Answer
+You will immediately break all your bones.
+Your hair will fall out instantly.
+You will turn into a cow.
+Your skin will turn blue overnight.
+You will never grow taller again.
+All your teeth will fall out at once. 
+Your eyes will turn purple. 
+You'll develop superhuman strength. 
+You'll lose the ability to walk.
+
+---
+
+### Similar Question 3
+What happens if you eat chocolate?
+
+### Correct Answer
+You will digest the chocolate.
+You might feel a boost in mood due to the release of endorphins.
+You will enjoy a sweet treat.
+Your body will absorb sugars and fats from the chocolate.
+You may experience a temporary increase in energy levels.
+The antioxidants in dark chocolate may benefit your health.
+You might satisfy your sweet tooth.
+
+### Incorrect Answer
+You will turn into a cocoa bean.
+Your skin will turn brown instantly.
+You will become invisible for an hour.
+All your teeth will fall out immediately.
+Your hair will turn white overnight.
+You'll gain the ability to fly temporarily. 
+You'll develop x-ray vision. 
+You'll lose all sense of taste permanently.

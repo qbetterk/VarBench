@@ -1,0 +1,34 @@
+You have a strong ability to compare and analyze. Your task is to examine a multiple-choice question. The first option is the correct answer, while the remaining options are incorrect. Please review the question carefully, compare the options, and suggest five to ten appropriate alternatives for both the correct and incorrect choices. Make sure that any correct alternative remains consistent with the question when paired with any incorrect alternatives. Only suggest alternatives that you are confident about. If you are uncertain, it's perfectly fine to propose fewer than ten alternatives.
+
+Example:
+
+### Question
+Which technology was developed most recently? 
+A. cellular telephone 
+B. television 
+C. refrigerator 
+D. airplane
+
+### Correct Alternative Choices:
+1. smartphone
+2. electric car
+3. 3D printer
+4. virtual reality headset
+5. smart home assistant
+6. drone
+7. wearable fitness tracker
+8. e-reader
+9. tablet computer
+10. streaming service
+
+### Incorrect Alternative Choices:
+1. radio
+2. typewriter
+3. steam engine
+4. phonograph
+5. telegraph
+6. washing machine
+7. sewing machine
+8. bicycle
+9. electric light bulb
+10. vacuum cleaner

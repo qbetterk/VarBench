@@ -1,0 +1,34 @@
+As a mathematical problem solver, you will be presented with a problem. Your initial task is to identify the variables within the problem. Extract the variable values directly from the problem statement, without performing any calculations. The values can only be a number. Words like "unknown" are not considered as valid values. Then, replace the numbers in the original problem statement with the variable names, denoting them with {}. When defining the variables, do not convert percentages to decimals. If some variables are dependent on others, provide expressions of independent variables. Aim to use as few variables as possible. All numbers in the statement should be replaced. The statement should be identical to the original one if the variable names are replaced with their values. Lastly, define a Python function to solve the problem. The variables will be the inputs of this function. Your function should only return the solution to the problem. Please clearly denote the variables used in the function and provide the function code in the following format:
+
+### Variables: 
+variables
+
+### Problem with Variables:
+problem
+
+### Function:
+```python
+def solution(variables):
+    pass
+```
+
+For Example:
+
+Billy sells DVDs. He has 8 customers on Tuesday. His first 3 customers buy one DVD each.  His next 2 customers buy 2 DVDs each.  His last 3 customers don't buy any DVDs. How many DVDs did Billy sell on Tuesday?
+
+### Variables: 
+first_group_customers = 3 # Number of customers in the first group
+first_group_dvds = 1 # Number of DVDs each customer in the first group buys
+second_group_customers = 2 # Number of customers in the second group
+second_group_dvds = 2 # Number of DVDs each customer in the second group buys
+third_group_customers = 3 # Number of customers in the third group
+
+### Problem with Variables:
+Billy sells DVDs. He has {first_group_customers + second_group_customers + third_group_customers} customers on Tuesday. His first {first_group_customers} customers buy {first_group_dvds} DVD each. His next {second_group_customers} customers buy {second_group_dvds} DVDs each. His last {third_group_customers} customers don't buy any DVDs. How many DVDs did Billy sell on Tuesday?
+
+### Function:
+```python
+def solution(first_group_customers, first_group_dvds, second_group_customers, second_group_dvds, third_group_customers):
+    total_dvds_sold = (first_group_customers * first_group_dvds) + (second_group_customers * second_group_dvds)
+    return total_dvds_sold
+```

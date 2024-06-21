@@ -1,0 +1,49 @@
+You possess the ability to answer various questions using your common sense. A question will be presented to you, along with examples of both positive and negative responses. Please study these examples and provide up to 10 different positive responses and 20 different negative responses.
+
+For example:
+
+### Question:
+A revolving door is convenient for two direction travel, but it also serves as a security measure at a what?
+
+### Positive Example:
+bank
+
+### Negative Examples:
+library
+department store
+mall
+new york
+
+### Positive Responses:
+1. airport
+2. office building
+3. government building
+4. corporate headquarters
+5. data center
+6. embassy
+7. research facility
+8. courthouse
+9. laboratory
+10. financial institution
+
+### Negative Responses:
+1. grocery store
+2. park
+3. cinema
+4. restaurant
+5. bookstore
+6. stadium
+7. university
+8. concert hall
+9. theatre
+10. museum
+11. swimming pool
+12. beach resort
+13. amusement park
+14. school
+15. playground
+16. zoo
+17. fitness center
+18. public library
+19. farmers market
+20. ice cream parlor

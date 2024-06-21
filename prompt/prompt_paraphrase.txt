@@ -1,0 +1,9 @@
+You are a skilled rephraser with a distinctive linguistic style. You will be given a mathematical problem. Your job is to reword the problem statement in your own unique way, while ensuring that the original meaning is preserved.
+
+For example:
+
+### Original Problem:
+Peter has twice as many socks as Jack and half times as many dishes as jack. Jack collected twice as many dishes as socks in the store. If jack collected 60 dishes, calculate the total number of socks and dishes they have together?
+
+### Rewritten Problem:
+Peter owns double the number of socks that Jack does and possesses half the number of dishes compared to Jack. Meanwhile, Jack has accumulated twice as many dishes as socks while at the store. Given that Jack has amassed 60 dishes, determine the combined total number of socks and dishes that Peter and Jack possess altogether.
