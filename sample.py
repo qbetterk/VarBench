@@ -32,7 +32,7 @@ class GPTSampler(BaseClass):
         """
         load problem statment template, sample new values and generate new statements"""
         self.train_data_path = "./data/grade-school-math/grade_school_math/data/train.jsonl"
-        self.data_path = f"./gen_data/gsm8k/gsm8k_test_{self.model}.jsonl" if not self.args.data_path else self.args.data_path
+        self.data_path = f"./gen_data/gsm8k/test_gsm8k_{self.model}.jsonl" if not self.args.data_path else self.args.data_path
         self.save_dir = f"./gen_data/gsm8k/sample_{self.random_seed}" if not self.args.save_dir else self.args.save_dir
         os.makedirs(self.save_dir, exist_ok=True)
         self.save_path = os.path.join(self.save_dir, "test.jsonl")
@@ -142,12 +142,12 @@ class GPTSampler(BaseClass):
 
     def generate_dev_set_csqa(self, shuffle=False):
         """
-        sample both positive and negative choices for cqa
-        try to arc's evaluation code, so convert cqa into arc format
+        sample both positive and negative choices for csqa
+        try to use arc's evaluation code, so convert csqa into arc format
         1. if the random seed is zero, then we generate the original data
         2. if candidate list is empty, then we use the original choices
         3. all choices are capitalized for the first letter"""
-        self.data_path = "./gen_data/csqa/dev_gpt4o_human.jsonl" if not self.args.data_path else self.args.data_path
+        self.data_path = "./gen_data/csqa/dev_csqa_gpt4o.jsonl" if not self.args.data_path else self.args.data_path
         shuffle = True
         if shuffle:
             self.save_dir = f"./gen_data/csqa/shuffle_{self.random_seed}" if not self.args.save_dir else self.args.save_dir
@@ -205,7 +205,7 @@ class GPTSampler(BaseClass):
         for arc_challenge
         load problem statment template, sample new values and generate new statements"""
 
-        self.data_path = f"./gen_data/arc/challenge/test_gpt4o.jsonl" if not self.args.data_path else self.args.data_path
+        self.data_path = f"./gen_data/arc/challenge/test_arc_challenge_gpt4o.jsonl" if not self.args.data_path else self.args.data_path
         self.save_dir = f"./gen_data/arc/challenge/sample_{self.random_seed}" if not self.args.save_dir else self.args.save_dir
         os.makedirs(self.save_dir, exist_ok=True)
         self.train_data_path = "data/ARC-V1-Feb2018-2/ARC-Challenge/ARC-Challenge-Train.jsonl"
@@ -299,10 +299,10 @@ class GPTSampler(BaseClass):
 
     def generate_val_set_truthfulqa(self, new_question=True):
         """
-        for arc_challenge
+        for truthfulqa
         load problem statment template, sample new values and generate new statements"""
 
-        self.data_path = f"./gen_data/truthfulqa/validation_gpt4o.jsonl" if not self.args.data_path else self.args.data_path
+        self.data_path = f"./gen_data/truthfulqa/validation_truthfulqa_gpt4o.jsonl" if not self.args.data_path else self.args.data_path
         if new_question:
             self.save_dir = f"./gen_data/truthfulqa/sample_both_{self.random_seed}" if not self.args.save_dir else self.args.save_dir
         else:
