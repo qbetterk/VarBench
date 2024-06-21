@@ -1,0 +1,15 @@
+include: truthfulqa_mc1.yaml
+task: truthfulqa_mc2_sample_both_43
+dataset_path: ./gen_data/truthfulqa/sample_both_43
+dataset_name: null
+doc_to_target: 0
+doc_to_choice: "{{mc2_targets.choices}}"
+process_results: !function utils.process_results_mc2
+should_decontaminate: True
+doc_to_decontamination_query: question
+metric_list:
+  - metric: acc
+    aggregation: mean
+    higher_is_better: true
+metadata:
+  version: 2.0

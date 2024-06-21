@@ -1,0 +1,31 @@
+task: csqa
+dataset_name: null
+group:
+  - ai2_arc
+dataset_path: /home/qkun/projs/variable_benchmark/gen_data/csqa/sample_0
+output_type: multiple_choice
+training_split: 
+validation_split: validation
+test_split: 
+doc_to_target: "{{choices.label.index(answerKey)}}"
+doc_to_choice: "{{choices.text}}"
+should_decontaminate: true
+doc_to_decontamination_query: "Q: {{question}}\nA: "
+doc_to_text: "Q: What do people use to absorb extra ink from a fountain pen? Answer Choices: (a) Shirt pocket (b) Calligrapher’s hand (c) Inkwell (d) Desk drawer (e) Blotter\nA:Blotter\n\n\
+Q: What home entertainment equipment requires cable? Answer Choices: (a) Radio shack (b) Substation (c) Television (d) Cabinet\nA: The answer must require cable. Of the above choices, only television requires cable. So the answer is (c) Television.\n\n\
+Q: The fox walked from the city into the forest, what was it looking for? Answer Choices: (a) Pretty flowers (b) Hen house (c) Natural habitat (d) Storybook\nA:Hen house\n\n\
+Q: : Sammy wanted to go to where the people were. Where might he go? Answer Choices: (a) Populated areas (b) Race track (c) Desert (d) Apartment (e) Roadblock\nA:Populated areas\n\n\
+Q: Where do you put your grapes just before checking out? Answer Choices: (a) Mouth (b) Grocery cart (c) Supermarket (d) Fruit basket (e) Fruit market\nA:Grocery cart.\n\n\
+Q: Google Maps and other highway and street GPS services have replaced what? Answer Choices: (a) United States (b) Mexico (c) Countryside (d) Atlas\nA:Atlas.\n\n\
+Q: Before getting a divorce, what did the wife feel who was doing all the work? Answer Choices: (a) Harder (b) Anguish (c) Bitterness (d) Tears (e) Sadness\nA:Bitterness\n\n\
+Q: {{question}}\nA:"
+num_fewshot: 0
+metric_list:
+  - metric: acc
+    aggregation: mean
+    higher_is_better: true
+  - metric: acc_norm
+    aggregation: mean
+    higher_is_better: true
+metadata:
+  version: 1.0

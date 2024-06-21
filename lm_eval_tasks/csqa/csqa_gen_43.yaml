@@ -1,0 +1,53 @@
+task: csqa_gen_43
+dataset_name: null
+group:
+  - chain_of_thought
+dataset_path: /home/qkun/projs/variable_benchmark/gen_data/csqa/sample_43
+output_type: generate_until
+training_split: 
+validation_split: validation
+test_split: 
+doc_to_target: "{{answerKey}}"
+doc_to_text: "Q: What do people use to absorb extra ink from a fountain pen? Answer Choices: (a) Shirt pocket (b) Calligrapher’s hand (c) Inkwell (d) Desk drawer (e) Blotter\nA: The answer must be an item that can absorb ink. Of the above choices, only blotters are used to absorb ink. So the answer is (e) Blotter.\n\n\
+Q: What home entertainment equipment requires cable? Answer Choices: (a) Radio shack (b) Substation (c) Television (d) Cabinet\nA: The answer must require cable. Of the above choices, only television requires cable. So the answer is (c) Television.\n\n\
+Q: The fox walked from the city into the forest, what was it looking for? Answer Choices: (a) Pretty flowers (b) Hen house (c) Natural habitat (d) Storybook\nA: The answer must be something in the forest. Of the above choices, only natural habitat is in the forest. So the answer is (b) Hen house.\n\n\
+Q: Sammy wanted to go to where the people were. Where might he go? Answer Choices: (a) Populated areas (b) Race track (c) Desert (d) Apartment (e) Roadblock\nA: The answer must be a place with a lot of people. Of the above choices, only populated areas have a lot of people. So the answer is (a) Populated areas.\n\n\
+Q: Where do you put your grapes just before checking out? Answer Choices: (a) Mouth (b) Grocery cart (c) Supermarket (d) Fruit basket (e) Fruit market\nA: The answer should be the place where grocery items are placed before checking out. Of the above choices, grocery cart makes the most sense for holding grocery items. So the answer is (b) Grocery cart.\n\n\
+Q: Google Maps and other highway and street GPS services have replaced what? Answer Choices: (a) United States (b) Mexico (c) Countryside (d) Atlas\nA: The answer must be something that used to do what Google Maps and GPS services do, which is to give directions. Of the above choices, only atlases are used to give directions. So the answer is (d) Atlas.\n\n\
+Q: Before getting a divorce, what did the wife feel who was doing all the work? Answer Choices: (a) Harder (b) Anguish (c) Bitterness (d) Tears (e) Sadness\nA: The answer should be the feeling of someone getting divorced who was doing all the work. Of the above choices, the closest feeling is bitterness. So the answer is (c) Bitterness.\n\n\
+Q: {{question}}\nA:"
+num_fewshot: 0
+metric_list:
+  - metric: exact_match
+    aggregation: mean
+    higher_is_better: true
+    ignore_case: true
+    ignore_punctuation: false
+    regexes_to_ignore:
+      - ","
+      - "\\$"
+      - "(?s).*#### "
+      - "\\.$"
+generation_kwargs:
+  until:
+    - "Q:"
+    - "</s>"
+    - "<|im_end|>"
+  do_sample: false
+repeats: 1
+num_fewshot: 0
+filter_list:
+  - name: "strict-match"
+    filter:
+      - function: "regex"
+        regex_pattern: "So the answer is (\\([a-e]\\))"
+      - function: "take_first"
+  - name: "flexible-extract"
+    filter:
+      - function: "regex"
+        group_select: -1
+        regex_pattern: "(\\([a-e]\\))"
+      - function: "take_first"
+metadata:
+  version: 3.0
+  num_fewshot: 8
