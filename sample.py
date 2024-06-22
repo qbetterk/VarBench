@@ -65,6 +65,11 @@ class GPTSampler(BaseClass):
         data_var.close()
         print(f"Successfully reconstruct {count} / {len(data)} problems from the original GSM8K")
 
+        # copy_train_set
+        train_data = self._load_jsonl(self.train_data_path)
+        for idx, row in enumerate(tqdm(train_data)):
+            row["index"] = idx
+        self._save_jsonl(train_data, os.path.join(self.save_dir, "train.jsonl"))
 
     def normalize(self, number):
         # Convert string to float, format it with 3 decimal places, and strip trailing zeros
@@ -128,18 +133,6 @@ class GPTSampler(BaseClass):
         return question_delex
 
 
-    def copy_train_set(self):
-        train_data = self._load_jsonl(self.train_data_path)
-        for idx, row in enumerate(tqdm(train_data)):
-            row["index"] = idx
-        self._save_jsonl(train_data, os.path.join(self.save_dir, "train.jsonl"))
-
-
-    def train_and_test(self):
-        self.generate_test_set_gsm8k()
-        self.copy_train_set()
-
-
     def generate_dev_set_csqa(self, shuffle=False):
         """
         sample both positive and negative choices for csqa
@@ -148,7 +141,7 @@ class GPTSampler(BaseClass):
         2. if candidate list is empty, then we use the original choices
         3. all choices are capitalized for the first letter"""
         self.data_path = "./gen_data/csqa/dev_csqa_gpt4o.jsonl" if not self.args.data_path else self.args.data_path
-        shuffle = True
+        shuffle = False
         if shuffle:
             self.save_dir = f"./gen_data/csqa/shuffle_{self.random_seed}" if not self.args.save_dir else self.args.save_dir
         else:
@@ -297,11 +290,11 @@ class GPTSampler(BaseClass):
         return data_hf
 
 
-    def generate_val_set_truthfulqa(self, new_question=True):
+    def generate_val_set_truthfulqa(self, new_question=False):
         """
         for truthfulqa
         load problem statment template, sample new values and generate new statements"""
-
+        
         self.data_path = f"./gen_data/truthfulqa/validation_truthfulqa_gpt4o.jsonl" if not self.args.data_path else self.args.data_path
         if new_question:
             self.save_dir = f"./gen_data/truthfulqa/sample_both_{self.random_seed}" if not self.args.save_dir else self.args.save_dir
