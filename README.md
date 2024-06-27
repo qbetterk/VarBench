@@ -1,5 +1,6 @@
 # VarBench: Robust Language Model Benchmarking Through Dynamic Variable Perturbation
 [[Paper]](https://arxiv.org/abs/2406.17681)|[[Huggingface]](https://huggingface.co/datasets/Columbia-NLP/VarBench)
+
 VarBench is a new benchmark with dynamically-valued variables to help deal with the problem of benchmark data contamination. Currently, the following tasks are supported: **[GSM8K](https://arxiv.org/abs/2110.14168)**, **[CommonsenseQA](https://www.tau-nlp.sites.tau.ac.il/commonsenseqa)**, **[AI2 Reasoning Challenge](https://allenai.org/data/arc)**, and **[TruthfulQA](https://arxiv.org/abs/2109.07958)**. We are planning to extend VarBench to include other complex tasks such as **[AGIEval](https://arxiv.org/abs/2304.06364)** and **[MMLU](https://arxiv.org/pdf/2009.03300)**.
 To keep the results comparable, we use the [lm-eval harness](https://github.com/EleutherAI/lm-evaluation-harness) from EleutherAI.
 
